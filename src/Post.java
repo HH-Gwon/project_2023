@@ -17,7 +17,7 @@ class Post {
 	public int getNum() {
 		return num;
 	}
-
+	//여기에 
 	public String toString() {
 		return "[ " + num + " ]\t<" + head + ">" + "\n작성자: " + userName + "\t\t등록일: " + date;
 	}
