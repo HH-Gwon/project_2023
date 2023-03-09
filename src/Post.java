@@ -13,7 +13,7 @@ class Post {
 		this.body = body;
 		this.date = date;
 	}
-	//변경 테스트
+	//변경 테스트 다시 
 	public int getNum() {
 		return num;
 	}
