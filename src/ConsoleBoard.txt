@@ -1,0 +1,56 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class ConsoleBoard {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("|1.목록|	|2.등록|	|3.내용|	|4.삭제|	|0.종료|" + '\n' + ">>");
+		int sw = sc.nextInt();
+
+		switch (sw) {
+		case 1:
+			System.out.println("=======================================");
+			System.out.println("|번 호|	|제 목|	|작성자|	|작성일|");
+			System.out.println("---------------------------------------");
+			break;
+		case 2:
+			//study62
+			System.out.print("제목>");
+			String head = sc.next();
+			System.out.print("내용>");
+			String body = '\t' + sc.next()+'\t';
+			System.out.print("작성자>");
+			String userName = sc.next();
+			
+			try (BufferedWriter fileHead = new BufferedWriter(new FileWriter(head+".txt"))) {
+				fileHead.write(head, 0, head.length());
+				//System.out.print('\t');
+				fileHead.write(body, 0, body.length());
+				//System.out.print('\t');
+				//fileHead.newLine();
+				fileHead.write(userName, 0, userName.length());
+				
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			break;
+		case 3:
+			//study62
+			System.out.print("위의 게시판 번호중 하나를 넣어 주세요." + '\n' + ">>");
+			int readNum = sc.nextInt();
+			
+			break;
+		case 4:
+			
+			break;
+
+		default:
+			break;
+		}
+	}
+
+}
