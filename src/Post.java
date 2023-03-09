@@ -13,11 +13,11 @@ class Post {
 		this.body = body;
 		this.date = date;
 	}
-
+	//변경 테스트
 	public int getNum() {
 		return num;
 	}
-	//여기에 
+	
 	public String toString() {
 		return "[ " + num + " ]\t<" + head + ">" + "\n작성자: " + userName + "\t\t등록일: " + date;
 	}
